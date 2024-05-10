@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+          <li class="comfort">RCC</li>
+         <li><a href="/home.html"><i class='bx bxs-dashboard' style='color:#ffffff'></i></a></li>
+         <li><a href=""><i class='bx bxs-calendar-alt' style='color:#ffffff'></i></a></i></li>
+         <li><a href="/index.html"><i class='bx bx-log-out-circle' style='color:#ffffff'></i></a></li>
+      </ul>
+  </div>
+  <div>
+    <div  id="header">
+       <h1>WELCOE TO OUR DASHBOARD</h1>
+    </div>
+    <div class="form-container">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      </div>
+      <form id="login" class="form-group" style="left: 50px;">
+        <input type="text" placeholder="Username" class="input-field">
+        <input type="password" placeholder="Password" class="input-field">
+        <input type="checkbox" class="check-box"><span>Remember Password</span>
+        <input type="submit" value="Sign In" class="submit-btn">
+      </form>
+      <form id="register" class="form-group" style="left: 450px; display: none;">
+        <input type="text" placeholder="Names" class="input-field">
+        <input type="email" placeholder="Email" class="input-field">
+        <input type="password" placeholder="Password" class="input-field">
+        <input type="password" placeholder="Confirm Password" class="input-field">
+        <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+        <input type="submit" value="Register" class="submit-btn">
+      </form>
+    </div>
+  </div>
+</div>
+  </div>
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+      y.style.display = "block";
+      x.style.display = "none";
+    }
+
+    function login() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0px";
+      x.style.display = "block";
+      y.style.display = "none";
+    }
+  </script>
+</body>
+</html>

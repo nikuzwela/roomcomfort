@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <ul>
+            <li class="comfort">RCC</li>
+           <li><a href="/home.html"><i class='bx bxs-dashboard' style='color:#ffffff'></i></a></li>
+           <li><a href=""><i class='bx bxs-calendar-alt' style='color:#ffffff'></i></a></i></li>
+           <li><a href="/index.html"><i class='bx bx-log-out-circle' style='color:#ffffff'></i></a></li>
+        </ul>
+    </div>
+    <div class="content-container">
+    <div class="header">
+        <div>
+           <h1>Hello, Kami</h1>
+           <p>Welcome to dashboard</p>
+        </div>
+      <div class="calendar">
+        <input type="text" id="date-input" readonly>
+        <i class='bx bxs-calendar-alt' id="calendar-icon"></i>
+      </div>
+    </div>
+    <div class="reading">
+      <h2><i class="fas fa-thermometer-half"></i> Current Temperature: <span id="current-temperature">--</span>°C</h2>
+      <h2><i class="fas fa-lightbulb"></i> Light Intensity: <span id="light">--</span> lux</h2>
+    </div>
+    <div class="content-control">
+    <div class="chart-container">
+      <canvas id="temperature-chart" style="height: 100px; ;"></canvas>
+    </div>
+    <div class="controls">
+      <h3><i class="fas fa-cogs"></i> Adjustments</h3>
+      <div class="control">
+        <label for="temp-control"><i class="fas fa-thermometer-half"></i> Temperature:</label>
+        <input type="range" id="temp-control" min="0" max="40" value="20">
+      </div>
+      <div class="control">
+        <label for="light-control"><i class="fas fa-lightbulb"></i> Light Intensity:</label>
+        <input type="range" id="light-control" min="0" max="1000" value="500">
+      </div>
+      <div class="control">
+        <button id="set-temperature"><i class="fas fa-thermometer-half"></i> Set Temperature</button>
+        <button id="set-light"><i class="fas fa-lightbulb"></i> Set Light Intensity</button>
+      </div>
+      <div class="control">
+        <label for="fan-toggle"><i class="fas fa-fan"></i> Fan:</label>
+        <input type="checkbox" id="fan-toggle">
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
